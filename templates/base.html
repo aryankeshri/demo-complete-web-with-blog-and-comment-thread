@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<!--DOCTYPE html -->
+<html>
+<head>
+<title>{% block title %}{% endblock %}BlogDemo Project</title>
+<!-- Latest compiled and minified CSS -->
+
+{% include 'head_css.html' %}
+<style>
+{% block style %}{% endblock %}
+</style>
+
+{% block head_extra %} {% endblock head_extra %}
+
+</head>
+<body>
+
+<div id="fb-root"></div>
+
+{% include 'navbar.html' %}
+
+<div class='container'>
+{% block jumbotron %}{% endblock %}
+    <ul>
+        {% include "messages_display.html" %}
+        {% block post_detail_link %}{% endblock %}
+    </ul>
+        {% block content %}{% endblock content %}
+</div>
+<!-- Latest compiled and minified JavaScript -->
+{% include 'javascript.html' %}
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Home | {% endblock %}
+
+
+<style>
+      {% block style %}
+
+      {% endblock %}
+</style>
+
+
+{% block jumbotron %}
+
+    {% include 'jumbotron.html' %}
+
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class='col-sm-7'>
+        <div class="row modules col-sm-7">
+            <p class="lead text-align-center">Contact Us</p>
+            <p>Need more information about our product, have questions or want to provide feedback?</p>
+            <br>
+            <p>
+            Get in touch with us at
+            <a href="mailto:info@example.com">info@example.com</a>
+            or
+            <br>
+            use the contact form on the right.
+            </p>
+            <br>
+            <p>
+            Need technical support? Please visit our
+            <a href="/support">Support</a>
+            section.
+            </p>
+        </div>
+    </div>
+  <div class="col-sm-3 pull-right">
+        <p class="lead text-align-center">{{ title }}</p>
+        <form method="POST" action=" ">{% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" class="btn btn-primary" value="Sign Up" />
+        </form>
+  </div>
+</div>
+
+{% endblock %}

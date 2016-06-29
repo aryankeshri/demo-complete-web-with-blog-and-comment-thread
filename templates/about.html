@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+{% block title %}About| {% endblock %}
+
+
+<style>
+      {% block style %}
+
+      {% endblock %}
+</style>
+
+
+{% block content %}
+<!--<div class="container">-->
+    <div class="col-md-12">
+        <div class="col-sm-7">
+            <h2>What We Do</h2>
+            <p>We enable HR departments to leverage IT for both effectiveness and efficiency. Our software solutions cover all areas including employee information management, leave and attendance management, training, appraisals, compensation and much more. </p>
+            <h2>Our Strengths</h2>
+            <p>A razor sharp focus and daily interactions with the best HR professionals in the field, have given us deep insights into your needs. We have incorporated their best practices and wisdom in our products. We have also chosen the features carefully with pragmatism that can come only from solid experience.</p>
+            <p>We constantly innovate and upgrade our products to incorporate the latest advances in technology and the ever changing needs of HR and Payroll departments. We backup our products with high quality customer support and service. Our support is timely and relevant, ensuring a high degree of usability for our products. </p>
+        </div>
+        <div class="col-sm-4">
+            <img src='{% static "img/20_year_img.png" %}' class="img-about img-responsive" />
+        </div>
+    </div>
+<!--</div>-->
+{% endblock %}
